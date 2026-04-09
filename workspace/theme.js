@@ -70,7 +70,7 @@ export const DarkTheme = css`
     body {
       background-color: var(--t-cp-base-white);
     }
-    .border-beam {
+    .shine-border {
       background-image: radial-gradient(
         #000,
         #000,
@@ -80,6 +80,9 @@ export const DarkTheme = css`
         #000,
         #000
       ) !important;
+    }
+    .b__header__variant01__navigation-board__tint--active {
+      background: rgba(0, 0, 0, 0.7) !important;
     }
   }
 `;
