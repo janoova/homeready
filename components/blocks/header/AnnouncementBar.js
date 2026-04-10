@@ -114,11 +114,7 @@ const AnnouncementBar = ({ siteSettings }) => {
               }}
             >
               {enablePhoneSvg && (
-                <Phone
-                  className="w-3 h-3 shrink-0"
-                  fill="currentColor"
-                  strokeWidth={0}
-                />
+                <Phone className="w-3 h-3 shrink-0" fill="currentColor" strokeWidth={0} />
               )}
               {buttonTitle}
               {!enablePhoneSvg && (

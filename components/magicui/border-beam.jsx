@@ -1,4 +1,4 @@
-"use client";
+"use client";;
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
@@ -13,28 +13,31 @@ export const BorderBeam = ({
   style,
   reverse = false,
   initialOffset = 0,
-  borderWidth = 1,
+  borderWidth = 1
 }) => {
   return (
     <div
       className="pointer-events-none absolute inset-0 rounded-[inherit] border-transparent [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] border-(length:--border-beam-width)"
-      style={{
-        "--border-beam-width": `${borderWidth}px`,
-      }}
-    >
+      style={
+        {
+          "--border-beam-width": `${borderWidth}px`
+        }
+      }>
       <motion.div
         className={cn(
           "border-beam absolute aspect-square",
           "bg-gradient-to-l from-[var(--color-from)] via-[var(--color-to)] to-transparent",
-          className,
+          className
         )}
-        style={{
-          width: size,
-          offsetPath: `rect(0 auto auto 0 round ${size}px)`,
-          "--color-from": colorFrom,
-          "--color-to": colorTo,
-          ...style,
-        }}
+        style={
+          {
+            width: size,
+            offsetPath: `rect(0 auto auto 0 round ${size}px)`,
+            "--color-from": colorFrom,
+            "--color-to": colorTo,
+            ...style
+          }
+        }
         initial={{ offsetDistance: `${initialOffset}%` }}
         animate={{
           offsetDistance: reverse
@@ -47,8 +50,7 @@ export const BorderBeam = ({
           duration,
           delay: -delay,
           ...transition,
-        }}
-      />
+        }} />
     </div>
   );
 };
